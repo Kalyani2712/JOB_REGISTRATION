@@ -8,6 +8,7 @@ It allows users to register for jobs by filling out a form with necessary detail
 It is designed to be lightweight and responsive, making it accessible across different devices 📱💻.
 The application follows a modular approach, making it easy to maintain and extend with additional features. 🛠️
 
+
 ✨ Features
 
 🏢 User registration with job-related details
@@ -18,6 +19,7 @@ The application follows a modular approach, making it easy to maintain and exten
 
 📱 Responsive design
 
+
 📌 Usage
 
 🌐 Open http://localhost:4200 in your browser.
@@ -25,6 +27,7 @@ The application follows a modular approach, making it easy to maintain and exten
 📝 Fill in the job registration form.
 
 📩 Submit the form to register for a job.
+
 
 🛠️ Technologies Used
 

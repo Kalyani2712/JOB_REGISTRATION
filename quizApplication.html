@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="QuizApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        /* CSS styles for the quiz interface */
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body ng-controller="QuizController">
+    <div class="quiz-container" ng-show="!quizStarted">
+        <h1>Welcome to My Quiz Application</h1>
+        <button ng-click="startQuiz()">Start Quiz</button>
+    </div>
+     </body>
+</html>

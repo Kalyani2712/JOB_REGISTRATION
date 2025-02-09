@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jobRegistrationApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Successful</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+ background-image: url('black.jpg'); /* Add your background image URL */
+      background-size: cover;
+      background-position: center;
+
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .details {
+      margin-bottom: 20px;
+     
+    }
+  </style>
+</head>
+<body>
+ 
+ <div class="container" ng-controller="RegistrationSuccessController">
+    <h2>Registration Successful</h2>
+       <p>Thank you for registering!</p>
+    <p><h1>We will inform you if you are Qualified</h1></p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</body>
+</html>

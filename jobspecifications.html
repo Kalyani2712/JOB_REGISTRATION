@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jobRegistrationApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Specification Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+     background-image: url('black.jpg'); /* Add your background image URL */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" ng-controller="JobSpecificationsController">
+         <div>
+        <h2>Job Specifications</h2>
+        <fieldset>
+          <legend>Job Specifications</legend>
+          <div class="form-group">
+            <label for="position">Position:</label>
+            <input type="text" id="position" ng-model="formData.position" ng-required="true">
+          </div>
+          <div class="form-group">
+            <label for="experience">Experience (years):</label>
+            <input type="number" id="experience" ng-model="formData.experience" ng-required="true">
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" ng-model="formData.skills" ng-required="true">
+          </div>
+          <!-- Additional job specification fields -->
+          <div class="form-group">
+            <label for="education">Education:</label>
+            <input type="text" id="education" ng-model="formData.education">
+          </div>
+          <div class="form-group">
+            <label for="salary">Expected Salary:</label>
+            <input type="number" id="salary" ng-model="formData.salary">
+          </div>
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" ng-model="formData.location">
+          </div>
+            <div class="form-group">
+            <label for="additionalSkills">Additional Skills:</label>
+            <input type="text" id="additionalSkills" ng-model="formData.additionalSkills">
+          </div>
+          <div class="form-group">
+            <label for="availability">Availability:</label>
+            <input type="text" id="availability" ng-model="formData.availability">
+          </div>
+             <div class="form-group">
+            <label for="portfolio">Portfolio:</label>
+            <input type="file" id="portfolio" ng-model="formData.portfolio">
+          </div>
+          <div class="form-group">
+            <label for="howHeard">How did you hear about us?</label>
+            <input type="text" id="howHeard" ng-model="formData.howHeard">
+          </div>
+          <div class="form-group">
+            <label for="contactMethod">Preferred Contact Method:</label>
+            <input type="text" id="contactMethod" ng-model="formData.contactMethod">
+          </div>
+             <div class="form-group">
+            <label for="privacyPolicy">I agree to the privacy policy:</label>
+            <input type="checkbox" id="privacyPolicy" ng-model="formData.privacyPolicy">
+          </div>
+        </fieldset>
+        <!-- Previous button to go back to personal information page -->
+        <button type="button" onclick="window.location.href = 'C:/Users/kalya/OneDrive/Ta%CC%80i%20li%C3%AA%CC%A3u/angular/personaldetails.html';">Previous</button>
+        <button type="submit" ng-disabled="!isFormValid()" onclick="window.location.href ='C:/Users/kalya/OneDrive/Ta%CC%80i%20li%C3%AA%CC%A3u/angular/submitdetail.html';" >Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('jobRegistrationApp', [])
+      .controller('JobSpecificationsController', function($scope) {
+        $scope.formData = {};
+        
+        // Check if the form is valid
+        $scope.isFormValid = function() {
+          return $scope.formData.position && $scope.formData.experience && $scope.formData.skills;
+        };
+      });
+  </script>
+</body>
+</html>

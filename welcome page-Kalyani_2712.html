@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jobRegistrationApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('jobAppimage.jpg'); /* Add your background image URL */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      position: relative;
+      max-width: 500px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Adding some opacity to improve readability */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      color:black ;
+      border :5px solid Tomato;
+      font-size: 45px ;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border: 5px;
+   border-radius: 15px;
+      padding: 20px  20px;
+      font-size: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .about-us-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .about-us-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="C:/Users/kalya/OneDrive/Ta%CC%80i%20li%C3%AA%CC%A3u/angular/welcome%20page.html">Home</a>
+<a href="C:/Users/kalya/OneDrive/Ta%CC%80i%20li%C3%AA%CC%A3u/angular/personaldetails.html">personal Details </a>
+<a href="C:/Users/kalya/OneDrive/Tài%20liệu/angular/jobspecifications.html">Job Specification </a>
+      </div>
+
+  <h1>WELCOME TO JOB REGISTRATION  </h1>
+
+  <div ng-controller="registrationController" class="container">
+    <div ng-show="currentPage === 'welcome'">
+      <button ng-click="startRegistration()">Start Registration</button>
+    </div>
+  </div>
+
+  <button class="about-us-button" type="button" onclick="window.location.href = 'C:/Users/kalya/OneDrive/Ta%CC%80i%20li%C3%AA%CC%A3u/angular/aboutus.html';">About Us</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('jobRegistrationApp', [])
+      .controller('registrationController', function($scope, $window) {
+        $scope.currentPage = 'welcome';
+        $scope.formData = {};
+
+        $scope.startRegistration = function() {
+          $window.location.href = 'C:/Users/kalya/OneDrive/Ta%CC%80i%20li%C3%AA%CC%A3u/angular/personaldetails.html';
+        };
+      });
+  </script>
+</body>
+</html>

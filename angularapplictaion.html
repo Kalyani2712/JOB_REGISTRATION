@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jobApplicationFormApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div ng-controller="jobApplicationFormController" class="container">
+    <h2>Job Application Form</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" ng-model="applicant.name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" ng-model="applicant.email" required>
+      </div>
+      <!-- Other input fields for personal information, education background, work experience, skills, etc. -->
+      <button ng-click="submitApplication()">Submit</button>
+    </form>
+    <div ng-show="applicationSubmitted" class="confirmation">
+      <p>Thank you for submitting your application!</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

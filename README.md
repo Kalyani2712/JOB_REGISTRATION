@@ -11,18 +11,24 @@ The application follows a modular approach, making it easy to maintain and exten
 ✨ Features
 
 🏢 User registration with job-related details
+
 ✅ Form validation for required fields
+
 🔄 Dynamic UI updates with AngularJS
+
 📱 Responsive design
 
 📌 Usage
 
 🌐 Open http://localhost:4200 in your browser.
+
 📝 Fill in the job registration form.
+
 📩 Submit the form to register for a job.
 
 🛠️ Technologies Used
 
 ⚡ AngularJS
+
 🎨 HTML, CSS, JavaScript
 
